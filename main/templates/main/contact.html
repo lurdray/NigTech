@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+ <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end">
+      <div class="col-md-9 ftco-animate pb-5 mb-5">
+       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Request a quote <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-3 bread">Request a quote</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <div class="container">
+   <div class="row justify-content-center mb-5 pb-3">
+    <div class="col-md-7 heading-section text-center ftco-animate">
+      <h2 style="color: #565655">{{ response }}</h2>
+      <span class="subheading">Request a quote</span>
+      <h2 class="mb-4">Have a Project?</h2>
+      <p>Share with us, let us bring your dream to life!</p>
+    </div>
+  </div>
+
+  <div class="row block-9">
+    <div class="col-md-8">
+      <form id="contact-forms" method="post" style="border-color:purple;">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                        <div class="form-group" id="name-field">
+                                            <div class="form-input">
+                                                <input type="text" class="form-control" id="form-name" name="name" placeholder="Name.." required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                        <div class="form-group" id="email-field">
+                                            <div class="form-input">
+                                                <input type="text" class="form-control" id="form-email" name="email" placeholder="Phone Number.." required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="form-group" id="phone-field">
+                                            <div class="form-input">
+                                                <input type="text" class="form-control" id="form-phone" name="phone" placeholder="Project Title....">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="form-group" id="message-field">
+                                            <div class="form-input">
+                                                <textarea class="form-control" rows="6" id="form-message" name="message" placeholder="Give some information for your proposed project...." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Send</button> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+  
+</div>
+
+<div class="col-md-4 d-flex pl-md-5">
+ <div class="row">
+   <div class="dboxs w-100 d-flex ftco-animates">
+    <div class="icons d-flexs align-items-center justify-content-center">
+     <span class="fa fa-map-markers"></span>
+   </div>
+ </div>
+ <div class="dbox w-100 d-flex ftco-animate">
+  <div class="icon d-flex align-items-center justify-content-center">
+   <span class="fa fa-phone"></span>
+ </div>
+ <div class="text">
+   <p><span>Phone:</span> <a href="tel://2348148737265">+234 8148 737 265 <br />+234 812 985 9405</a></p>
+ </div>
+</div>
+<div class="dbox w-100 d-flex ftco-animate">
+  <div class="icon d-flex align-items-center justify-content-center">
+   <span class="fa fa-paper-plane"></span>
+ </div>
+ <div class="text">
+   <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@nigtech.net</a></p>
+ </div>
+</div>
+<div class="dbox w-100 d-flex ftco-animate">
+  <div class="icon d-flex align-items-center justify-content-center">
+   <span class="fa fa-globe"></span>
+ </div>
+ <div class="text">
+   <p><span>Website</span> <a href="https:nigtech.net">NigTech.net</a></p>
+ </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>	
+
+{% endblock %}

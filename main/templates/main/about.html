@@ -1,0 +1,109 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style type="text/css">
+  .btn-primary:hover{
+    background-color: #fff212 !important;
+    color: #000 !important;
+    transition: 0.6s;
+  }
+</style>
+
+	<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg_3.png' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-end">
+				<div class="col-md-9 ftco-animate pb-5 mb-5">
+					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
+					<h1 class="mb-3 bread">About NigTech.net</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center no-gutters">
+				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+					<h2 class="mb-2">About NigTech.net</h2>
+				</div>
+			</div>
+			<div class="row wrap-about py-5">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-6 order-md-last ftco-animate d-flex">
+							<div class="img w-100" style="background-image: url({% static 'main/images/work-3.jpg' %});"></div>
+						</div>
+						<div class="col-md-6 ftco-animate">
+							<div class="text">
+								<h3>ABOUT NIGTECH</h3>
+								
+								<p style="color: #000">Nigtech is a world class web development agency and software development company with a large pool of software developers available for dedicated and fixed time/cost projects. We have proven expertise in trending web technologiesdevelop custom and responsive websites, web apps and eCommerce solutions.</p>
+
+								<h4>Who We Are</h4>
+								<p style="color: #000">Nigtech is a group that represents togetherness for over two decades of successful journey. For Nigtech, the definition of success is to transcend innovative ideas of people to reality, this is what we, as a Team, want to be remembered for!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="text">
+						<p style="color: #000">Our vision has led Nigtech to become a top IT company in Nigeria for delivering various industry-led mobility solutions. The goal is to empower clients and businesses by creating new possibilities leveraging the technologies of today and tomorrow with the utmost quality, satisfaction, and transparency.</p><br>
+						<p style="color: #000">Our belief in creating tangible value for our customers is what we think is different about Nigtech. Our attention to detail and quality is unmatched in the industry. We’re not just a resource provider. We value our customers’ success as much as our own – sharing development risk, so that they can be bold in their adoption of new technologies.</p>
+						
+						<p><a href="{% url 'work' %}" class="btn btn-primary">View all projects</a></p>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row pt-5">
+				<div class="col-md-12">
+					<div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url({% static 'main/images/abt1.jpg' %});" data-stellar-background-ratio="0.5">
+						<div class="col-md-6 ftco-animate">
+							<span>Get Started</span>
+							<h2  style="color: #000">Fill in the brief and get the project estimate</h2>
+							<p style="color: #000">We consult, design & engineer successful web, mobile & custom software solutions, that fuel innovation & increase business efficiency.</p>
+							<p><a href="{% url 'contact' %}" class="btn btn-primary">Get started</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row pt-5">
+				<div class="col-md-4">
+					<div class="services-2 d-flex ftco-animate">
+						<span>01</span>
+						<div>
+							<h3>Our Mission</h3><br>
+							<p  style="color: #000">To build amazing fully responsive, dynamic and SEO optimized websites for our customer to enable foster better than their competitor in their businesses.</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="services-2 d-flex ftco-animate">
+						<span>02</span>
+						<div class="">
+							<h3>Our Vision</h3><br>
+							<p style="color: #000">To be the number web solution provider in Nigeria and beyond.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="services-2 d-flex ftco-animate">
+						<span>03</span>
+						<div>
+							<h3>Our Goal</h3><br>
+							<p  style="color: #000">To be the number one web development company on the continent</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% endblock %}
