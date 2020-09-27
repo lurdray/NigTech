@@ -1,13 +1,24 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
+
+{% block title %}
+Request a Quote | NigTech | Nigeria's Tech Industry.
+
+{% endblock %}
+
+
+
+
+
 {% block content %}
 
- <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+ <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg-3.jpg' %});" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end">
       <div class="col-md-9 ftco-animate pb-5 mb-5">
-       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Request a quote <i class="fa fa-chevron-right"></i></span></p>
+       <p class="breadcrumbs"><span class="mr-2"><a href="#">Home <i style="color: #009000;" class="fa fa-chevron-right"></i></a></span> <span>Request a quote <i style="color: #009000;" class="fa fa-chevron-right"></i></span></p>
        <h1 class="mb-3 bread">Request a quote</h1>
      </div>
    </div>
@@ -19,7 +30,7 @@
    <div class="row justify-content-center mb-5 pb-3">
     <div class="col-md-7 heading-section text-center ftco-animate">
       <h2 style="color: #565655">{{ response }}</h2>
-      <span class="subheading">Request a quote</span>
+      <span class="subheading" style="color: #009000;">Request a quote</span>
       <h2 class="mb-4">Have a Project?</h2>
       <p>Share with us, let us bring your dream to life!</p>
     </div>
@@ -66,7 +77,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <button class="btn btn-primary" type="submit">Send</button> 
+                                            <button class="btn btn-primarys" style="background-color: #009000; color: #fff;" type="submit">Send</button> 
                                         </div>
                                     </div>
                                 </div>
@@ -82,27 +93,27 @@
    </div>
  </div>
  <div class="dbox w-100 d-flex ftco-animate">
-  <div class="icon d-flex align-items-center justify-content-center">
+  <div style="background-color: #009000; color: #fff;" class="icon d-flex align-items-center justify-content-center">
    <span class="fa fa-phone"></span>
  </div>
  <div class="text">
-   <p><span>Phone:</span> <a href="tel://2348148737265">+234 8148 737 265 <br />+234 812 985 9405</a></p>
+   <p><span>Phone:</span> <a style="color: #009000;" href="tel://2348148737265">+234 8148 737 265 <br />+234 812 985 9405</a></p>
  </div>
 </div>
 <div class="dbox w-100 d-flex ftco-animate">
-  <div class="icon d-flex align-items-center justify-content-center">
+  <div style="background-color: #009000; color: #fff;" class="icon d-flex align-items-center justify-content-center">
    <span class="fa fa-paper-plane"></span>
  </div>
  <div class="text">
-   <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@nigtech.net</a></p>
+   <p><span>Email:</span> <a style="color: #009000;" href="mailto:info@yoursite.com">info@nigtech.net</a></p>
  </div>
 </div>
 <div class="dbox w-100 d-flex ftco-animate">
-  <div class="icon d-flex align-items-center justify-content-center">
+  <div style="background-color: #009000; color: #fff;" class="icon d-flex align-items-center justify-content-center">
    <span class="fa fa-globe"></span>
  </div>
  <div class="text">
-   <p><span>Website</span> <a href="https:nigtech.net">NigTech.net</a></p>
+   <p><span>Website</span> <a style="color: #009000;" href="https:nigtech.net">NigTech.net</a></p>
  </div>
 </div>
 </div>
@@ -110,6 +121,6 @@
 
 </div>
 </div>
-</section>	
+</section>  
 
 {% endblock %}

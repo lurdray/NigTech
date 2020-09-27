@@ -3,9 +3,14 @@
 <html lang="en">
 {% load static %}
 <head>
-	<title>Nigtech</title>
+	<title>{% block title %} {% endblock %}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="NigTech | Nigeria's Tech Industry is a virtual company into designs and development of websites with topnotch user experiences and user interface. Every website we create is unique and captures your brand identity and offerings. We also provide search engine optimisation for our clients. our websites are fully responsive across all latest devices.We provide very dynamic web-design packages and custom website builds that bring traffic, eyeballs and conversion.
+">
+	<meta name="keywords" content="NigTech | Nigeria's Tech Industry, website, corona virus website, website design, website builder, web developer, webdesign, ecommerce website, web design company, web creator, web designer, responsive web designer, web development, web development company, best website design, web design software, web page design, build a website, how to build to a website, web developer salary, design website, website layout,
+digital marketer, digital marketing, market, selling websites, client website, digital business, digital marketer job, digital marketing job, remote digital marketing job, remote digital marketing, remote digital marketing job,">
+	<meta name="author" content="muritala ibrahim, odiaga raymond,">
 	
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
 
@@ -24,18 +29,21 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{% url 'index' %}">NI<span>GTE</span>CH</a>
+			<a style="color: #009000" class="navbar-brand" href="{% url 'index' %}">NI<span style="color: grey;">GTE</span>CH</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+				<span style="color: #009000" class="oi oi-menu"></span> Menu
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="{% url 'work' %}" class="nav-link">Our projects</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Request a quote</a></li>
+					<li class="nav-item"><a href="{% url 'dm_sign_up' %}" class="nav-link">Become a Digital Marketer!</a></li>
+					<li class="nav-item"><a href="{% url 'work' %}" class="nav-link">Our projects</a></li>
+					<li class="nav-item"><a href="{% url 'team' %}" class="nav-link">Our Team</a></li>
+					<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -46,50 +54,51 @@
 
 {% endblock %}
 
-	<footer class="ftco-footer ftco-section">
+	<footer class="ftco-footer ftco-section" style="background-color: #171717;">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2" style="color: #fff212">NIGTECH</h2>
+						<h2 class="ftco-heading-2" style="color: #00ff00">NIGTECH</h2>
 						<p>We design and develop websites with topnotch user experiences and user interface.</p>
+						<p>Our websites are fully responsive across all latest devices.We provide very dynamic web-design packages and custom website builds that bring traffic, eyeballs and conversion.</p>
 						<ul class="ftco-footer-social list-unstyled mt-5">
-							<li class="ftco-animate"><a href="#"><span style="color: #fff212" class="fa fa-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span style="color: #fff212" class="fa fa-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span style="color: #fff212" class="fa fa-instagram"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span style="color: #00ff00" class="fa fa-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span style="color: #00ff00" class="fa fa-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span style="color: #00ff00" class="fa fa-instagram"></span></a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4 ml-md-4">
-						<h2 class="ftco-heading-2" style="color: #fff212">Menu</h2>
+						<h2 class="ftco-heading-2" style="color: #00ff00">Menu</h2>
 						<ul class="list-unstyled">
-							<li><a href="{% url 'work' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Projects</a></li>
-							<li><a href="{% url 'about' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Team</a></li>
-							<li><a href="{% url 'work' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Reviews</a></li>
-							<li><a href="{% url 'index' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>FAQs</a></li>
+							<li><a href="{% url 'work' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+							<li><a href="{% url 'about' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Team</a></li>
+							<li><a href="{% url 'work' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Reviews</a></li>
+							<li><a href="{% url 'dm_sign_up' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Become a Digital Marketer</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4 ml-md-4">
-						<h2 class="ftco-heading-2" style="color: #fff212">About Us</h2>
+						<h2 class="ftco-heading-2" style="color: #00ff00">About Us</h2>
 						<ul class="list-unstyled">
-							<li><a href="{% url 'about' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Our Story</a></li>
-							<li><a href="{% url 'about' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Vision</a></li>
-							<li><a href="{% url 'about' %}"><span style="color: #fff212" class="fa fa-chevron-right mr-2"></span>Mission</a></li>
+							<li><a href="{% url 'about' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Our Story</a></li>
+							<li><a href="{% url 'about' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Vision</a></li>
+							<li><a href="{% url 'about' %}"><span style="color: #00ff00" class="fa fa-chevron-right mr-2"></span>Mission</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2" style="color: #fff212">Contact</h2>
+						<h2 class="ftco-heading-2" style="color: #00ff00">Contact</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><a href="#"><span style="color: #fff212" class="icon fa fa-phone"></span><span class="text">+234 814 873 7265</span></a></li>
-								<li><a href="#"><span style="color: #fff212" class="icon fa fa-phone"></span><span class="text">+234 812 985 9405</span></a></li>
-								<li><a href="#"><span style="color: #fff212" class="icon fa fa-envelope pr-4"></span><span class="text">info@nigtech.net</span></a></li>
-								<li><a href="#"><span style="color: #fff212" class="icon fa fa-envelope pr-4"></span><span class="text">www.NigTech.net</span></a></li>
+								<li><a href="#"><span style="color: #00ff00" class="icon fa fa-phone"></span><span class="text">+234 814 873 7265</span></a></li>
+								<li><a href="#"><span style="color: #00ff00" class="icon fa fa-phone"></span><span class="text">+234 812 985 9405</span></a></li>
+								<li><a href="#"><span style="color: #00ff00" class="icon fa fa-envelope pr-4"></span><span class="text">info@nigtech.net</span></a></li>
+								<li><a href="#"><span style="color: #00ff00" class="icon fa fa-envelope pr-4"></span><span class="text">www.NigTech.net</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -99,7 +108,7 @@
 				<div class="col-md-12 text-center">
 					
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i style="color: black" class="fa fa-heart" aria-hidden="true"></i> |<i style="color: black" class="fa fa-heart" aria-hidden="true"></i>Powered by Nigtech<a href="https://colorlib.com" target="_blank" style="color: black">Colorlib</a>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i style="color: #171717" class="fa fa-heart" aria-hidden="true"></i> |<i style="color: #171717" class="fa fa-heart" aria-hidden="true"></i>Powered by <b style="color: #00ff00">Nigtech</b><a href="https://colorlib.com" target="_blank" style="color: #171717">Colorlib</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 					</div>
 				</div>

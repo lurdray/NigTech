@@ -1,6 +1,13 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block title %}
+About NigTech | Nigeria's Tech Industry.
+
+{% endblock %}
+
+
+
 {% block content %}
 
 <style type="text/css">
@@ -11,12 +18,12 @@
   }
 </style>
 
-	<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg_3.png' %});" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg-2.jpg' %});" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight align-items-end">
 				<div class="col-md-9 ftco-animate pb-5 mb-5">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
+					<p class="breadcrumbs"><span class="mr-2"><a href="#">Home <i style="color: #009000;" class="fa fa-chevron-right"></i></a></span> <span>About us <i style="color: #009000;" class="fa fa-chevron-right"></i></span></p>
 					<h1 class="mb-3 bread">About NigTech.net</h1>
 				</div>
 			</div>
@@ -58,15 +65,13 @@
 				</div>
 			</div>
 
-
-
 			<div class="row pt-5">
 				<div class="col-md-12">
-					<div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url({% static 'main/images/abt1.jpg' %});" data-stellar-background-ratio="0.5">
+					<div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url({% static 'main/images/nig.png' %});" data-stellar-background-ratio="0.5">
 						<div class="col-md-6 ftco-animate">
-							<span>Get Started</span>
-							<h2  style="color: #000">Fill in the brief and get the project estimate</h2>
-							<p style="color: #000">We consult, design & engineer successful web, mobile & custom software solutions, that fuel innovation & increase business efficiency.</p>
+							<span style="color: #009000;">Get Started</span>
+							<h2  style="color: white">Fill in the brief and get the project estimate</h2>
+							<p style="color: white">We design & engineer successful web, mobile & software solutions, that fuels innovation.</p>
 							<p><a href="{% url 'contact' %}" class="btn btn-primary">Get started</a></p>
 						</div>
 					</div>
@@ -76,7 +81,7 @@
 			<div class="row pt-5">
 				<div class="col-md-4">
 					<div class="services-2 d-flex ftco-animate">
-						<span>01</span>
+						<span style="color: #009000;">01</span>
 						<div>
 							<h3>Our Mission</h3><br>
 							<p  style="color: #000">To build amazing fully responsive, dynamic and SEO optimized websites for our customer to enable foster better than their competitor in their businesses.</p>
@@ -86,7 +91,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="services-2 d-flex ftco-animate">
-						<span>02</span>
+						<span style="color: #009000;">02</span>
 						<div class="">
 							<h3>Our Vision</h3><br>
 							<p style="color: #000">To be the number web solution provider in Nigeria and beyond.</p>
@@ -95,7 +100,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="services-2 d-flex ftco-animate">
-						<span>03</span>
+						<span style="color: #009000;">03</span>
 						<div>
 							<h3>Our Goal</h3><br>
 							<p  style="color: #000">To be the number one web development company on the continent</p>

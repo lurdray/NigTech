@@ -19,6 +19,14 @@ def work(request):
 	context = {"works": works}
 	return render(request, "main/work.html", context)
 
+
+def team(request):
+	teams = Team.objects.all().order_by('-pub_date')
+	context = {"teams": teams}
+	return render(request, "main/team.html", context)
+
+
+
 def contact(request):
 
 	if request.method == "POST":
@@ -42,3 +50,35 @@ def contact(request):
 
 		context = {"response": response}
 		return render(request, "main/contact.html", context)
+
+
+
+
+def DMSignUpView(request):
+
+	if request.method == "POST":
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		phone = request.POST.get('phone')
+		about = request.POST.get('about')
+		why = request.POST.get('why')
+		address = request.POST.get('address')
+
+		dm = DigitalMarketer.objects.create(name=name, email=email, phone=phone, about=about, address=address, why=why)
+		dm.save()
+
+		response = "Data Submitted!, Await our response(Within 24hrs)"
+
+		context = {"response": response}
+		return render(request, "main/dm_sign_up.html", context)
+
+	else:
+
+	
+		response = ""
+
+		context = {"response": response}
+		return render(request, "main/dm_sign_up.html", context)
+
+
+

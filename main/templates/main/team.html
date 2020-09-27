@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Team Members of NigTech | Nigeria's Tech Industry.
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({% static 'main/images/bg-2.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-end">
+				<div class="col-md-9 ftco-animate pb-5 mb-5">
+					<p class="breadcrumbs"><span class="mr-2"><a href="#">Home <i style="color: #009000;" class="fa fa-chevron-right"></i></a></span> <span>Team Members <i style="color: #009000;" class="fa fa-chevron-right"></i></span></p>
+					<h1 class="mb-3 bread">Our Team</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+<br><br>
+
+
+
+
+
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row justify-content-center no-gutters">
+				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+					<h2 class="mb-2">Expert Team</h2>
+				</div>
+			</div>
+
+
+			<div class="row">
+				{% for team in teams %}
+
+
+				<div class="col-sm-6 col-md-6 col-lg-3 ftco-animate">
+					<div class="staff">
+						<div class="img-wrap d-flex align-items-stretch justify-content-end">
+							<div class="img align-self-stretch" style="background-image: url({{work.image.url}});">
+								<ul class="ftco-social">
+									<li class="ftco-animate d-flex"><a href="{{ team.twitter }}" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a></li>
+									<li class="ftco-animate d-flex"><a href="{{ team.facebook }}" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a></li>
+									<li class="ftco-animate d-flex"><a href="{{ team.instagram }}" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="text d-flex align-items-center pt-3">
+							<div class="desc">
+								<h3 class="mb-2">{{ team.name }}</h3>
+								<span class="position mb-4">{{ team.postion }} <br /><k style="color: grey;">from <b>{{ team.country }}</b></k></span> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{% endfor %}
+				
+				
+			</div>
+
+
+
+
+		</div>
+		<div class="degree-left"></div>
+	</section>
+
+	
+{% endblock %} 
